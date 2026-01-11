@@ -3,9 +3,7 @@ from __future__ import annotations
 
 from codex_sdk import Codex
 
-from helpers import codex_path_override
-
-codex = Codex(codex_path_override=codex_path_override())
+codex = Codex()
 thread = codex.start_thread()
 
 schema = {

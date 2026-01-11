@@ -4,7 +4,6 @@ from __future__ import annotations
 from codex_sdk import Codex
 from codex_sdk.types import ThreadEvent, ThreadItem
 
-from helpers import codex_path_override
 
 
 def handle_item_completed(item: ThreadItem) -> None:
@@ -51,7 +50,7 @@ def handle_event(event: ThreadEvent) -> None:
 
 
 def main() -> None:
-    codex = Codex(codex_path_override=codex_path_override())
+    codex = Codex()
     thread = codex.start_thread()
 
     try:
